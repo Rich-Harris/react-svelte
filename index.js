@@ -6,7 +6,7 @@ export default class SvelteComponent extends React.Component {
 
 		this.container = React.createRef();
 		this.instance = null;
-		this.div = <div ref={this.container}></div>;
+		this.div = React.createElement('div', { ref: this.container });
 	}
 
 	componentDidMount() {
