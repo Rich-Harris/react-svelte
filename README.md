@@ -21,9 +21,10 @@ render(<MyReactApp/>, document.querySelector('main'));
 
 See the [demo](demo) folder for a more complete example.
 
+
 ## Why not just compile Svelte components to custom elements?
 
-Because React's support for custom elements is somewhat lacking.
+Because React's support for custom elements is [somewhat lacking](https://custom-elements-everywhere.com/).
 
 
 ## Limitations
