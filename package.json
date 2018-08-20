@@ -1,0 +1,27 @@
+{
+  "name": "react-svelte",
+  "version": "1.0.0",
+  "description": "Use Svelte components inside a React app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rich-Harris/react-svelte.git"
+  },
+  "keywords": [
+    "react",
+    "svelte",
+    "components"
+  ],
+  "author": "Rich Harris",
+  "license": "LIL",
+  "bugs": {
+    "url": "https://github.com/Rich-Harris/react-svelte/issues"
+  },
+  "homepage": "https://github.com/Rich-Harris/react-svelte#readme",
+  "peerDependencies": {
+    "react": "^16.4.2"
+  }
+}

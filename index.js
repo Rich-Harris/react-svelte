@@ -1,0 +1,28 @@
+import * as React from 'react';
+
+export default class SvelteComponent extends React.Component {
+	constructor() {
+		super();
+
+		this.container = React.createRef();
+		this.instance = null;
+		this.div = <div ref={this.container}></div>;
+	}
+
+	componentDidMount() {
+		const { this: Constructor, ...data } = this.props;
+
+		this.instance = new Constructor({
+			target: this.container.current,
+			data
+		});
+	}
+
+	componentDidUpdate() {
+		this.instance.set(this.props);
+	}
+
+	render() {
+		return this.div;
+	}
+}
