@@ -19,7 +19,7 @@ function MyReactApp(props) {
 render(<MyReactApp/>, document.querySelector('main'));
 ```
 
-See the [demo](demo) folder for a more complete example.
+Demo [here](https://react-svelte.surge.sh), source code for the demo [here](demo).
 
 
 ## Why not just compile Svelte components to custom elements?
