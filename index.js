@@ -1,12 +1,16 @@
 import * as React from 'react';
 
 export default class SvelteComponent extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.container = React.createRef();
 		this.instance = null;
-		this.div = React.createElement('div', { ref: this.container });
+		let {component} = props;
+		if (!component) {
+			component = 'span';
+		}
+		this.element = React.createElement(component, { ref: this.container });
 	}
 
 	componentDidMount() {
@@ -27,6 +31,6 @@ export default class SvelteComponent extends React.Component {
 	}
 
 	render() {
-		return this.div;
+		return this.element;
 	}
 }
