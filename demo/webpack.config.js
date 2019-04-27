@@ -26,16 +26,10 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.html$/,
+				test: /\.(html|svelte)$/,
 				exclude: /node_modules/,
 				use: {
-					loader: 'svelte-loader',
-					options: {
-						skipIntroByDefault: true,
-						nestedTransitions: true,
-						emitCss: true,
-						hotReload: true
-					}
+					loader: 'svelte-loader'
 				}
 			},
 			{
