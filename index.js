@@ -6,7 +6,7 @@ export default class SvelteComponent extends React.Component {
 
 		this.container = React.createRef();
 		this.instance = null;
-		this.div = React.createElement('div', { ref: this.container });
+		this.fragment = React.createElement('fragment', { ref: this.container });
 	}
 
 	componentDidMount() {
@@ -27,6 +27,6 @@ export default class SvelteComponent extends React.Component {
 	}
 
 	render() {
-		return this.div;
+		return this.fragment;
 	}
 }
