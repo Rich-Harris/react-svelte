@@ -34,7 +34,10 @@ export default class SvelteComponent extends React.Component {
 export const wrap = Component => props => {
   const container = useRef(null);
   useEffect(() => {
-    new Component({ target: container.current, props });
+    const instance = new Component({ target: container.current, props });
+    return () => {
+      instance.$destroy();
+    };
   });
   return <div ref={container} />;
 };

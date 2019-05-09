@@ -1,9 +1,12 @@
 import SvelteComponent, { wrap } from "../";
 import ExampleUnwrapped from "./Example.svelte";
 import React from "react";
-import { render, cleanup, wait } from "react-testing-library";
+import { render, cleanup, wait, prettyDOM } from "react-testing-library";
 import "jest-dom/extend-expect";
 afterEach(cleanup);
+afterAll(() => {
+  console.log(prettyDOM(document.body));
+});
 describe("react-svelte", () => {
   test("can wrap a svelte component in jsx", () => {
     const Example = wrap(ExampleUnwrapped);
