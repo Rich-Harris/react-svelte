@@ -5,7 +5,7 @@
 ```jsx
 import { render } from "react-dom";
 import { wrap } from "react-svelte";
-import SvelteWidget from "./Widget.html";
+import SvelteWidget from "./Widget.svelte";
 
 const Widget = wrap(SvelteWidget);
 
