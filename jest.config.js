@@ -1,6 +1,7 @@
 const { jest: jestConfig } = require("kcd-scripts/config");
 
 const config = Object.assign(jestConfig, {
+  roots: ["."],
   transform: {
     ...jestConfig.transform,
     "^.+\\.svelte$": "jest-transform-svelte"

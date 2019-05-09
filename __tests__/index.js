@@ -1,16 +1,22 @@
-import { wrap } from "../";
+import SvelteComponent, { wrap } from "../";
 import ExampleUnwrapped from "./Example.svelte";
 import React from "react";
-import { render, wait } from "react-testing-library";
+import { render } from "react-testing-library";
+import "jest-dom/extend-expect";
 
-const Example = wrap(ExampleUnwrapped);
-
-
-describe("svelte-jsx", () => {
-  test("can wrap a svelte component in jsx", async () => {
+describe("react-svelte", () => {
+  test("can wrap a svelte component in jsx", () => {
+    const Example = wrap(ExampleUnwrapped);
     const { getByText } = render(<Example name="world" />);
 
+    expect(getByText("Hello world!")).toBeInTheDocument();
+  });
 
-    expect(getByText("Hello world!"));
+  test("can render using a host component", () => {
+    const { getByText } = render(
+      <SvelteComponent this={ExampleUnwrapped} name="world" />
+    );
+
+    expect(getByText("Hello world!")).toBeInTheDocument();
   });
 });
