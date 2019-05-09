@@ -1,9 +1,8 @@
 import SvelteComponent, { wrap } from "../";
 import ExampleUnwrapped from "./Example.svelte";
 import React from "react";
-import { render, cleanup } from "react-testing-library";
+import { render, cleanup, wait } from "react-testing-library";
 import "jest-dom/extend-expect";
-
 afterEach(cleanup);
 describe("react-svelte", () => {
   test("can wrap a svelte component in jsx", () => {
@@ -13,11 +12,12 @@ describe("react-svelte", () => {
     expect(getByText("Hello world!")).toBeInTheDocument();
   });
 
-  test("can render using a host component", () => {
+  test("can render using a host component", async () => {
     const { getByText } = render(
-      <SvelteComponent this={ExampleUnwrapped} name="world" />
+      <SvelteComponent this={ExampleUnwrapped} {...{ name: "foo" }} />
     );
 
-    expect(getByText("Hello world!")).toBeInTheDocument();
+    await wait();
+    expect(getByText("Hello foo!")).toBeInTheDocument();
   });
 });
