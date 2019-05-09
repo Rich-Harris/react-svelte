@@ -4,7 +4,7 @@
   "description": "Use Svelte components inside a React app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "kcd-scripts test --config=jest.config.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,11 @@
   "homepage": "https://github.com/Rich-Harris/react-svelte#readme",
   "peerDependencies": {
     "react": "^16.4.2"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.4.3",
+    "jest-transform-svelte": "^1.0.0",
+    "kcd-scripts": "^1.2.1",
+    "react-testing-library": "^6.0.0"
   }
 }
