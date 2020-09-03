@@ -7,7 +7,7 @@
     "cross-env": "^5.1.5",
     "css-loader": "^0.28.11",
     "mini-css-extract-plugin": "^0.4.0",
-    "serve": "^6.5.5",
+    "serve": "^10.1.2",
     "style-loader": "^0.21.0",
     "svelte": "^2.0.0",
     "svelte-loader": "2.9.0",
