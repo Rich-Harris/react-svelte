@@ -16,7 +16,7 @@ const main = document.querySelector('main');
 let i = 0;
 
 function update() {
-	render(<App this={SvelteThing} count={i++}/>, main);
+	render(<App count={i++}/>, main);
 	setTimeout(update, 1000);
 }
 
