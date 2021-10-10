@@ -24,7 +24,7 @@ Demo [here](https://react-svelte.surge.sh), source code for the demo [here](demo
 
 ## Why not just compile Svelte components to custom elements?
 
-Because React's support for custom elements is [somewhat lacking](https://custom-elements-everywhere.com/).
+[Because React's support for custom elements is somewhat lacking](https://custom-elements-everywhere.com/). However, Preact supports custom elements.]
 
 
 ## Limitations
